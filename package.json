@@ -1,0 +1,39 @@
+{
+  "name": "qa-api-mock",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "type": "module",
+  "scripts": {
+    "build": "yarn swagger:build",
+    "dev": "concurrently yarn:swagger:dev yarn:server:dev",
+    "swagger:build": "webpack --config src/swagger/webpack.config.js",
+    "swagger:dev": "webpack watch --mode development --config src/swagger/webpack.config.js",
+    "server:dev": "nodemon src/server.js",
+    "generate-data": "node scripts/generate-data.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.1.0",
+    "json-schema-faker": "^0.5.3",
+    "json-server": "^0.17.3",
+    "jsonschema": "~1.4.1",
+    "swagger-ui": "~5.7.2"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "~10.1.0",
+    "@openapi-contrib/openapi-schema-to-json-schema": "~5.1.0",
+    "clean-webpack-plugin": "~4.0.0",
+    "concurrently": "~8.2.1",
+    "css-loader": "~6.8.1",
+    "html-webpack-plugin": "~5.5.3",
+    "json-loader": "~0.5.7",
+    "lodash.merge": "~4.6.2",
+    "nodemon": "^3.0.1",
+    "style-loader": "~3.3.3",
+    "webpack": "~5.88.2",
+    "webpack-cli": "~5.1.4",
+    "yaml-loader": "~0.8.0"
+  }
+}

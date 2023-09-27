@@ -1,0 +1,100 @@
+{
+  "trucks": [
+    {
+      "id": 150,
+      "code": "OZHT215PM68I",
+      "name": "Dump Truck",
+      "status": "TO_JOB",
+      "description": "comptus ustulo tergiversatio utrum exercitationem tabernus damnatio minima"
+    },
+    {
+      "id": 176,
+      "code": "JD9WMUO",
+      "name": "Semi",
+      "status": "AT_JOB"
+    },
+    {
+      "id": 63,
+      "code": "ASVZKQRA",
+      "name": "Dump Truck",
+      "status": "TO_JOB"
+    },
+    {
+      "id": 23,
+      "code": "GEZV2J",
+      "name": "Concrete Pump",
+      "status": "TO_JOB",
+      "description": "capto carus texo averto cuius taceo"
+    },
+    {
+      "id": 75,
+      "code": "QOJ16DM",
+      "name": "Dump Truck",
+      "status": "RETURNING",
+      "description": "ait vix tonsor acerbitas delibero"
+    },
+    {
+      "id": 187,
+      "code": "3DA5M3U1ZO",
+      "name": "Semi",
+      "status": "LOADING",
+      "description": "stella advoco"
+    },
+    {
+      "id": 86,
+      "code": "RXBTFR0JQ",
+      "name": "Semi",
+      "status": "LOADING",
+      "description": "talis testimonium corrupti iure in solum uredo dolorum"
+    },
+    {
+      "id": 12,
+      "code": "EEFMF32",
+      "name": "Concrete Pump",
+      "status": "RETURNING",
+      "description": "arx occaecati"
+    },
+    {
+      "id": 32,
+      "code": "SUGX0QUC",
+      "name": "Dump Truck",
+      "status": "AT_JOB",
+      "description": "delectatio vapulus"
+    },
+    {
+      "id": 82,
+      "code": "W9O20WDK7",
+      "name": "Dump Truck",
+      "status": "LOADING",
+      "description": "suffoco conventus totam vito beneficium"
+    },
+    {
+      "id": 76,
+      "code": "IEGDY3XFZS",
+      "name": "Concrete Pump",
+      "status": "RETURNING",
+      "description": ""
+    },
+    {
+      "id": 160,
+      "code": "VQR66I1LQ54",
+      "name": "Semi",
+      "status": "RETURNING",
+      "description": "labore validus tardus neque delibero demens vestigium verbera"
+    },
+    {
+      "id": 69,
+      "code": "YILXVRSYKG6J",
+      "name": "Mixer Front",
+      "status": "TO_JOB",
+      "description": "deficio pecus studio tamquam suspendo utilis vinitor consectetur curtus deleo"
+    },
+    {
+      "id": 260,
+      "code": "E18CVBN4O",
+      "name": "Mixer Rear",
+      "status": "OUT_OF_SERVICE",
+      "description": "ratione trado vorax"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+openapi: "3.0.3"
+info:
+  version: "1"
+  title: "ERP API Mock"
+  description: ""
+paths:
+  /trucks:
+    get:
+      tags:
+        - Trucks
+      parameters:
+        - in: query
+          name: id
+          schema:
+            type: integer
+        - in: query
+          name: code
+          schema:
+            type: string
+        - in: query
+          name: name
+          schema:
+            type: string
+        - in: query
+          name: status
+          schema:
+            $ref: '#/components/schemas/TruckStatus'
+        - in: query
+          name: description
+          schema:
+            type: string
+        - in: query
+          name: limit
+          schema:
+            type: integer
+        - in: query
+          name: sort
+          schema:
+            type: string
+            enum: [ id, code, name, status ]
+        - in: query
+          name: order
+          schema:
+            type: string
+            enum: [ asc, desc ]
+        - in: query
+          name: page
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Truck"
+    post:
+      tags:
+        - Trucks
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TruckCreate'
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Truck'
+  /trucks/{id}:
+    get:
+      tags:
+        - Trucks
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Truck"
+    put:
+      tags:
+        - Trucks
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TruckBase'
+      responses:
+        200:
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Truck"
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    TruckBase:
+      properties:
+        code:
+          type: string
+          minLength: 1
+        name:
+          type: string
+          minLength: 1
+        status:
+          $ref: '#/components/schemas/TruckStatus'
+        description:
+          type: string
+    Truck:
+      allOf:
+        - properties:
+            id:
+              type: integer
+          required: [ id, code, name, status ]
+        - $ref: '#/components/schemas/TruckBase'
+    TruckCreate:
+      allOf:
+        - required: [ code, name, status ]
+        - $ref: '#/components/schemas/TruckBase'
+    TruckStatus:
+      type: string
+      enum:
+        - OUT_OF_SERVICE
+        - LOADING
+        - TO_JOB
+        - AT_JOB
+        - RETURNING
