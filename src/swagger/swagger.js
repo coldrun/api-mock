@@ -1,9 +1,8 @@
 import SwaggerUI from 'swagger-ui';
 import 'swagger-ui/dist/swagger-ui.css';
-import spec from '../schema/openapi.schema.yml';
 
 const ui = SwaggerUI({
-  spec,
+  url: 'openapi.schema.yml',
   dom_id: '#swagger',
 });
 

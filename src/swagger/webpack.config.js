@@ -1,4 +1,5 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -19,13 +20,6 @@ export default {
   module: {
     rules: [
       {
-        test: /\.ya?ml$/,
-        use: [
-          { loader: 'json-loader' },
-          { loader: 'yaml-loader', options: { asJSON: true } },
-        ],
-      },
-      {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' },
@@ -39,6 +33,11 @@ export default {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'template.html'),
       title: 'SwaggerUI',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, '../schema'), to: '.' },
+      ],
     }),
   ],
 };
