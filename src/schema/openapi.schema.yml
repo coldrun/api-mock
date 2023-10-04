@@ -109,6 +109,18 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Truck"
+    delete:
+      tags:
+        - Trucks
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Success"
 components:
   securitySchemes:
     BearerAuth:
