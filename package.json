@@ -1,9 +1,9 @@
 {
-  "name": "qa-api-mock",
-  "version": "1.0.0",
-  "description": "",
-  "author": "",
-  "license": "ISC",
+  "name": "api-mock",
+  "version": "0.0.1",
+  "description": "Simple API Mock powered by OpenAPI Specification",
+  "author": "Rafal Galka <rgalka@coldrun.com>",
+  "license": "MIT",
   "keywords": [],
   "type": "module",
   "scripts": {

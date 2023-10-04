@@ -1,2 +1,3 @@
-# api-mock
-Simple API Mock powered by OpenAPI Specification
+# API Mock
+
+Simple API Mock powered by OpenAPI Specification.
