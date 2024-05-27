@@ -36,6 +36,10 @@ server.use((req, res, next) => {
     }
 
     if (req.method === 'PUT') {
+      req.method = 'PATCH';
+    }
+
+    if (req.method === 'PATCH') {
       const id = (req.path.match(/\/trucks\/(\w+)/) || [])[1];
       const errors = validateTruckUpdate(id, req.body || {}, db.get('trucks'));
       if (errors) {
